@@ -1,25 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Header from './mycomponents/Header';
+import Footer from './mycomponents/Footer';
+import {BrowserRouter} from 'react-router-dom';
+import Mid from './mycomponents/Mid';
 function App() {
+  const data = {
+    username : "Elisha",
+    address : "Ktm",
+    phone : "9807686760"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+      <Header username ={data.username} address={data.address}></Header>
+      <Mid></Mid>
+      <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;
