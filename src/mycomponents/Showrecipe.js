@@ -1,15 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 const Showrecipe=()=>{
-    const [udata,setUdata]=useState([]);
+    const [udata,setUdata]=useState([{}]);
     const config={
-        header:{
+        headers:{
             Authorization:'Bearer '+ localStorage.getItem('token')     
         }
     }
             //show starting
         useEffect(()=>{
-            axios.get("http://localhost:90/recipe/:id",config)
+            axios.get("http://localhost:90/recipe/me", config)
             .then(result=>{
                 // console.log(result.data)
                 setUdata(result.data)
@@ -28,7 +28,10 @@ const Showrecipe=()=>{
     return(
         <div className="container">
             <div className="row">
-                {udata.map(singleData=>{
+                {
+                udata.map((singleData)=>{
+                    console.log(singleData)
+
                     return(
                         <div className="col-md-4">
                         <h2>Recipe Name:{singleData.name}</h2>
@@ -48,4 +51,4 @@ const Showrecipe=()=>{
         </div>
     )
 }
-export default Showrecipe;
+export default Showrecipe;;
