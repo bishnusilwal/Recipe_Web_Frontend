@@ -19,6 +19,8 @@ const Addrecipe=()=>{
         discription: ''
     }]);
     const [iname, setIname] = useState('');
+    const [ddiscription, setDdiscription] = useState('');
+
     const addUser=(e)=>{
         e.preventDefault();
         const recipeData={
@@ -50,6 +52,15 @@ const Addrecipe=()=>{
         const newItem = [item]
         setIngredients(newItem)
         setIname('')
+    }
+    const addDirection = (e) => {
+        e.preventDefault();
+        const item = {
+            discription: ddiscription,
+        };
+        const newItem = [item]
+        setDirection(newItem)
+        setDdiscription('')
     }
     
     const handleSelect = (e) => {
@@ -124,13 +135,17 @@ const Addrecipe=()=>{
 
 
 
+                <div className="flex flex-row">
                    <div className="form-group">
                        <label>Direction</label>
                        <input type="text" className="form-control"
-                       value={direction}
-                       onChange={e=>{setDirection({ discription:e.target.value})}}/>
+                       value={ddiscription}
+                       onChange={e=>{setDdiscription(e.target.value)}}/>
 
                    </div>
+                   <button onClick={addDirection}>add</button>
+                   </div>
+
 
                    <div className="flex flex-row">
                    <div className="form-group">
