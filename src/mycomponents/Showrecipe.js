@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Showrecipe=()=>{
     const [udata,setUdata]=useState([{}]);
     const config={
@@ -43,7 +44,9 @@ const Showrecipe=()=>{
                         <p>ingredients : {singleData.ingredients}</p>
                         <p>direction : {singleData.direction}</p>
                         <button onClick={()=>{deleteRecipe(singleData._id)}}>Delete</button>
-                        {/* <Link to={'/updaterecipe' + singleData._id}>Update Recipe</Link> */}
+                        <Link to={'/updaterecipe/'+singleData._id}>Update Recipe</Link>
+
+                        
                     </div>
                     )
                 })}     
