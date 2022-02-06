@@ -1,8 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import StarRating from 'react-bootstrap-star-rating';
 
 const Detailrecipe=()=>{
+
+    const [rating,setRating]=useState(0);
+    const [review,setReview]=useState('');
+    const [likes,setLikes]=useState(false);
+
     const [udata,setUdata]=useState({
         ingredients: {
             name: ''
@@ -46,6 +52,39 @@ const Detailrecipe=()=>{
         getRecipe()
         },[]);
 
+        function likePost(){
+            axios.put("http://localhost:90/recipe/"+rid+"/like", config)
+            .then(result => {
+
+            })
+            .catch(error => {
+
+            })
+        }
+
+        function ratePost(){
+            console.log(rating); 
+            const revi = { rating }
+            axios.put("http://localhost:90/recipe/"+rid+"/rate", revi, config)
+            .then(result => {
+
+            })
+            .catch(error => {
+
+            })
+        }
+
+        function reviewePost(){
+            const revi = { review }
+            axios.put("http://localhost:90/recipe/"+rid+"/review", revi, config)
+            .then(result => {
+
+            })
+            .catch(error => {
+
+            })
+        }
+
     return(
         <div className="container">
             <div className="">
@@ -60,6 +99,47 @@ const Detailrecipe=()=>{
                         <p>ingredients : {udata.ingredients.name}</p>
                         <p>direction : {udata.direction.discription}</p>
                         <p>Rimg : {udata.recipe.Rimg}</p>
+
+                        <select 
+                class="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10"
+                onChange={e => setRating(e.target.value)}
+              >
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+                <option value={5}>5</option>
+                <option value={6}>6</option>
+                <option value={7}>7</option>
+                <option value={8}>8</option>
+                <option value={9}>9</option>
+                <option value={10}>10</option>
+              </select>
+
+              <input type="Submit" className="btn btn-light" 
+ onClick={ratePost}
+ />
+
+        <div className="form-group">
+                       <label>Review</label>
+                       <input type="text" className="form-control"
+
+value={review}
+onChange={e=>{setReview(e.target.value)}}
+
+
+
+                      
+ /> <input type="Submit" className="btn btn-light" 
+ onClick={reviewePost}
+ />
+                       </div>
+                       <div className="form-group">
+                            
+                            <input type="button" className="btn btn-light" 
+                            onClick={likePost}
+                            />
+                        </div>
                           {/* {
                              
                             udata.ingredients.map((i) => {
@@ -78,4 +158,4 @@ const Detailrecipe=()=>{
         </div>
     )
 }
-export default Detailrecipe;;
+export default Detailrecipe;
