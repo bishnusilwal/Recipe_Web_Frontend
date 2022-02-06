@@ -9,6 +9,7 @@ import {Route, Routes} from 'react-router-dom';
 import Addrecipe from "./addRecipe";
 import Showrecipe from "./Showrecipe";
 import Updaterecipe from "./Updaterecipe";
+import Detailrecipe from "./RecipeDetails";
 class Mid extends Component{
     render(){
         return(
@@ -24,6 +25,7 @@ class Mid extends Component{
                    <Route path="/addrecipe" element={<Addrecipe/>} />
                    <Route path="/showrecipe" element={<Showrecipe/>} />
                    <Route path="/updaterecipe/:rid" element={<Updaterecipe/>} />
+                   <Route path="/detail/:rid" element={<Detailrecipe/>} />
 
                     
                 </Routes>

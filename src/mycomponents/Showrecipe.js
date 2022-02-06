@@ -14,10 +14,14 @@ const Showrecipe=()=>{
             .then(result=>{
                 // console.log(result.data)
                 setUdata(result.data)
+                console.log(udata);
             })
             .catch(e=>{
                 console.log(e)
             })
+
+    
+
         },[]);
         const deleteRecipe=(rid)=>{
             const data={rid}
@@ -31,7 +35,6 @@ const Showrecipe=()=>{
             <div className="row">
                 {
                 udata.map((singleData)=>{
-                    console.log(singleData)
 
                     return(
                         <div className="col-md-4">
@@ -41,11 +44,11 @@ const Showrecipe=()=>{
                         <p>cooktime : {singleData.cooktime}</p>
                         <p>totaltime : {singleData.totaltime}</p>
                         <p>category : {singleData.category}</p>
-                        <p>ingredients : {singleData.ingredients}</p>
-                        <p>direction : {singleData.direction}</p>
+                        {/* <p>ingredients : {singleData.ingredient}</p>                    
+                        <p>direction : {singleData.direction}</p> */}
                         <button onClick={()=>{deleteRecipe(singleData._id)}}>Delete</button>
                         <Link to={'/updaterecipe/'+singleData._id}>Update Recipe</Link>
-
+                        <Link to={'/detail/'+singleData._id}>View</Link>
                         
                     </div>
                     )

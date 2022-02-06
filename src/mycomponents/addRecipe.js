@@ -12,28 +12,38 @@ const Addrecipe=()=>{
     const [cooktime,setCooktime]=useState('');
     const [totaltime,setTotaltime]=useState('');
     const [category,setCategory]=useState('');
-    const [ingredients,setIngredients]=useState([{
-        name: ''
-    }]);
-    const [direction,setDirection]=useState([{
-        discription: ''
-    }]);
-    const [iname, setIname] = useState('');
-    const [ddiscription, setDdiscription] = useState('');
+    const [ingredients,setIngredients]=useState('');
+    const [direction,setDirection]=useState('');
+    const [rimg,setRimg]=useState(null);
+
+    const config={
+        headers:{
+            Authorization:'Bearer '+localStorage.getItem('token'),
+            "Content-Type": "multipart/form-data"
+        }
+    }
 
     const addUser=(e)=>{
         e.preventDefault();
-        const recipeData={
-            name,description,pretime,cooktime,totaltime,category,ingredients,direction
-        }
-        console.log(recipeData)
-        const config={
-            headers:{
-                Authorization:'Bearer '+localStorage.getItem('token')
-            }
-        }
-        axios.post("http://localhost:90/recipe/", recipeData,config)
+        // const recipeData={
+        //     name,description,pretime,cooktime,totaltime,category,ingredients,direction
+        // }
+
+        const recipeData=new FormData();
+        recipeData.append('name',name);
+        recipeData.append('description',description);
+        recipeData.append('pretime',pretime);
+        recipeData.append('cooktime',cooktime);
+        recipeData.append('totaltime',totaltime);
+        recipeData.append('category',category);
+        recipeData.append('ingredients',ingredients);
+        recipeData.append('direction',direction);
+        recipeData.append('recipe_image',rimg);
+
+
+        axios.post("http://localhost:90/recipe/",recipeData,config)
         .then(result111=>{
+            console.log(result111)
 
             // if(result111.data.success){
             //     setmessage('recipe inserted succesfully!!');
@@ -44,24 +54,6 @@ const Addrecipe=()=>{
         .catch();
     }
 
-    const addIngredients = (e) => {
-        e.preventDefault();
-        const item = {
-            name: iname,
-        };
-        const newItem = [item]
-        setIngredients(newItem)
-        setIname('')
-    }
-    const addDirection = (e) => {
-        e.preventDefault();
-        const item = {
-            discription: ddiscription,
-        };
-        const newItem = [item]
-        setDirection(newItem)
-        setDdiscription('')
-    }
     
     const handleSelect = (e) => {
         console.log(e.target.value);
@@ -139,11 +131,11 @@ const Addrecipe=()=>{
                    <div className="form-group">
                        <label>Direction</label>
                        <input type="text" className="form-control"
-                       value={ddiscription}
-                       onChange={e=>{setDdiscription(e.target.value)}}/>
+                       value={direction}
+                       onChange={e=>{setDirection(e.target.value)}}/>
 
                    </div>
-                   <button onClick={addDirection}>add</button>
+                   {/* <button onClick={addDirection}>add</button> */}
                    </div>
 
 
@@ -151,11 +143,22 @@ const Addrecipe=()=>{
                    <div className="form-group">
                        <label>Ingredient</label>
                        <input type="text" className="form-control"
-                       value={iname}
-                       onChange={e=>{setIname(e.target.value)}}/>
+                       value={ingredients}
+                       onChange={e=>{setIngredients(e.target.value)}}/>
 
                    </div>
-                   <button onClick={addIngredients}>add</button>
+                   {/* <button onClick={addIngredients}>add</button> */}
+                   </div>
+
+
+                   <div className="form-group">
+
+                       <label>Recipe Image</label>
+                       <input type="file" className="form-control"
+                       accept="image/png, image/jpeg"
+                       onChange={e=>setRimg(e.target.files[0])}
+                       
+                       />
                    </div>
                    
 
