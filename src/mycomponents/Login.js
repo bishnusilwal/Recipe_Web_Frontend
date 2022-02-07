@@ -17,6 +17,7 @@ const Login = ()=>{
             if(result11.data.token){
                 /// login success
                 localStorage.setItem('token', result11.data.token);
+                window.location.replace('/Showrecipe');
 
             }
             else{
