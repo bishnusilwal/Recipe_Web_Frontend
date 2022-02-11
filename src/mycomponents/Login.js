@@ -43,11 +43,11 @@ const Login = ()=>{
                                 onChange={(e)=>setPassword(e.target.value)} />
           
           <div className="form-group">
-              <button className="loginButton">Login</button>
+              <button className="loginButton"  onClick={userLogin}>Login</button>
                             
-                            <input type="Submit" className="btn btn-light" 
+                            {/* <input type="Submit" className="btn btn-light" 
                             onClick={userLogin}
-                            />
+                            /> */}
                         </div>
 
 

@@ -9,8 +9,7 @@ import {Route, Routes} from 'react-router-dom';
 import Addrecipe from "./addRecipe";
 import Showrecipe from "./Showrecipe";
 import Updaterecipe from "./Updaterecipe";
-import Detailrecipe from "./RecipeDetails";
-import addUser from "./addUser";         
+import Detailrecipe from "./RecipeDetails";         
 import Adduser from "./addUser";
 import Showuser from "./MyProfile";
 class Mid extends Component{
