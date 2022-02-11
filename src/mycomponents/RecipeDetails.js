@@ -27,7 +27,7 @@ const Detailrecipe=()=>{
             
         },
         
-
+        review: []
 
     });
     const { rid } = useParams(); 
@@ -52,13 +52,13 @@ const Detailrecipe=()=>{
         getRecipe()
         },[]);
 
-        function likePost(){
-            axios.put("http://localhost:90/recipe/"+rid+"/like", config)
+       async function likePost(){
+            await axios.put("http://localhost:90/recipe/update/like/"+rid)
             .then(result => {
-
+                console.log(result);
             })
             .catch(error => {
-
+                console.log(error);
             })
         }
 
@@ -140,12 +140,18 @@ onChange={e=>{setReview(e.target.value)}}
                             onClick={likePost}
                             />
                         </div>
-                          {/* {
+                        <p>Reviews</p>
+                          {
                              
-                            udata.ingredients.map((i) => {
-                                return ( <p>{i}</p>)
+                            udata.review.map((i) => {
+                                return (
+                                    <div>
+                                         <p>manxe: {i.mance}</p>
+                                         <p>review: {i.reviewss}</p>
+                                    </div>
+                                )
                             })
-                        }  */}
+                        } 
                         
                        
                         

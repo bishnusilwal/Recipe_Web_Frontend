@@ -10,6 +10,9 @@ import Addrecipe from "./addRecipe";
 import Showrecipe from "./Showrecipe";
 import Updaterecipe from "./Updaterecipe";
 import Detailrecipe from "./RecipeDetails";
+import addUser from "./addUser";         
+import Adduser from "./addUser";
+import Showuser from "./MyProfile";
 class Mid extends Component{
     render(){
         return(
@@ -24,6 +27,8 @@ class Mid extends Component{
                    <Route path="/login" element={<Login/>} />
                    <Route path="/addrecipe" element={<Addrecipe/>} />
                    <Route path="/showrecipe" element={<Showrecipe/>} />
+                   <Route path="/adduser" element={<Adduser/>} />
+                   <Route path="/showuser" element={<Showuser/>} />
                    <Route path="/updaterecipe/:rid" element={<Updaterecipe/>} />
                    <Route path="/detail/:rid" element={<Detailrecipe/>} />
 

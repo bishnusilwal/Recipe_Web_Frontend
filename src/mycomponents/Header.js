@@ -1,5 +1,7 @@
 import { Component } from "react/cjs/react.development";
 import {Link} from "react-router-dom";
+// import "../css/login.css"
+
 class Header extends Component{
     render(){
 
@@ -38,6 +40,14 @@ class Header extends Component{
         <Link class="nav-link" to="/showrecipe">My Recipe </Link>
       </li>
 
+      <li class="nav-item active">
+        <Link class="nav-link" to="/adduser">Add User </Link>
+      </li>
+
+      <li class="nav-item active">
+        <Link class="nav-link" to="/showuser">My profile </Link>
+      </li>
+
       <li class="nav-item action">
         <button onClick={logout}>Log out</button>
       </li>
@@ -69,6 +79,16 @@ class Header extends Component{
         <Link class="nav-link" to="/login">Login </Link>
 
       </li>
+
+      {/* <div class="input-group">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button type="button" class="btn btn-primary">
+    <i class="fas fa-search"></i>
+  </button>
+</div> */}
       
     </ul>
    
@@ -87,7 +107,7 @@ class Header extends Component{
                 <Link to="/product/111">Product</Link>
                 <Link to="/register/">Register</Link> */}
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">ChetoMitho</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

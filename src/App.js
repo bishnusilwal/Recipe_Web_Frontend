@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      
       <Header username ={data.username} address={data.address}></Header>
       <Mid></Mid>
       <Footer></Footer>

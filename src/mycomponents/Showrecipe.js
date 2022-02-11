@@ -39,6 +39,8 @@ const Showrecipe=()=>{
                     return(
                         <div className="col-md-4">
                         <h2>Recipe Name:{singleData.name}</h2>
+                        <p><img src={'http://localhost:90/'+singleData.rimg
+                    } className="img-fluid"  /></p>
                         <p>description : {singleData.description}</p>
                         <p>Pretime : {singleData.pretime}</p>
                         <p>cooktime : {singleData.cooktime}</p>

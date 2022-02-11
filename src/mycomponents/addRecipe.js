@@ -155,7 +155,7 @@ const Addrecipe=()=>{
 
                        <label>Recipe Image</label>
                        <input type="file" className="form-control"
-                       accept="image/png, image/jpeg"
+                    //    accept="image/png, image/jpeg"
                        onChange={e=>setRimg(e.target.files[0])}
                        
                        />
