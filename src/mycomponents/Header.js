@@ -1,6 +1,7 @@
 import { Component } from "react/cjs/react.development";
 import {Link} from "react-router-dom";
-// import "../css/login.css"
+import "../asset/style.css"
+import logo from '../asset/img/core-img/logo.png';
 
 class Header extends Component{
     render(){
@@ -13,84 +14,164 @@ class Header extends Component{
       var menu;
       if(localStorage.getItem('token')){
         menu=(
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <Link class="nav-link" to="/">Home </Link>
-      </li>
-     
-      <li class="nav-item active">
-        <Link class="nav-link" to="/about">About us </Link>
-      </li>
-      <li class="nav-item active">
-        <Link class="nav-link" to="/contact">Contact </Link>
-      </li>
-     
-      {/* <li class="nav-item active">
-        <Link class="nav-link" to="/register/"> Register</Link>
-      </li>
-      <li class="nav-item active">
-        <Link class="nav-link" to="/login">Login </Link>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
 
-      </li> */}
-      <li class="nav-item active">
-        <Link class="nav-link" to="/addrecipe">Add Recipe </Link>
-      </li>
-      <li class="nav-item active">
-        <Link class="nav-link" to="/showrecipe">My Recipe </Link>
-      </li>
 
-      <li class="nav-item active">
-        <Link class="nav-link" to="/adduser">Add User </Link>
-      </li>
+    <header class="header-area">
 
-      <li class="nav-item active">
-        <Link class="nav-link" to="/showuser">My profile </Link>
-      </li>
+<div class="delicious-main-menu">
+    <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+         
+            <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
-      <li class="nav-item action">
-        <button onClick={logout}>Log out</button>
-      </li>
-    </ul>
+            
+                <a class="nav-brand" href="index.html"><img src={logo}  alt=""></img></a> 
+
+              
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+
+                <div class="classy-menu">
+
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+
+               
+                    <div class="classynav">
+                        <ul>
+
+                       
+                            <li class="active">
+                            <Link class="nav-link" to="/">Home </Link> 
+                            </li>
+
+                            <li class="">
+                            <Link class="nav-link" to="/about">About Us </Link>
+                            </li>
+
+                             <li class="">
+                            <Link class="nav-link" to="/contact">Contact </Link>
+                            </li>
+                            <li class="">
+                            <Link class="nav-link" to="/addrecipe">Add Recipe </Link>
+                            </li>
+                            <li class="">
+                            <Link class="nav-link" to="/showrecipe">My Recipe</Link>
+                            </li>
+
+                            <li class="">
+                            <Link class="nav-link" to="/adduser">Add User </Link>
+                            </li>
+                            <li class="">
+                            <Link class="nav-link" to="/showuser">My Profile </Link>
+                            </li>
+
+
+                            <li class="">
+                            <button class="nav-link" onClick={logout} >Log Out </button>
+                            </li>
+                            
+
+                        </ul>
+
+                    
+                        {/* <div class="search-btn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div> */}
+
+                    </div>
+                  
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</header>
+
+
+    
    
   </div>
+
+
+
+
+
+
 
         )
       }
       else{
         menu=(
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <Link class="nav-link" to="/">Home </Link>
-      </li>
-     
-      <li class="nav-item active">
-        <Link class="nav-link" to="/about">About us </Link>
-      </li>
-      <li class="nav-item active">
-        <Link class="nav-link" to="/contact">Contact </Link>
-      </li>
-     
-      <li class="nav-item active">
-        <Link class="nav-link" to="/register/"> Register</Link>
-      </li>
-      <li class="nav-item active">
-        <Link class="nav-link" to="/login">Login </Link>
 
-      </li>
 
-      {/* <div class="input-group">
-  <div class="form-outline">
-    <input type="search" id="form1" class="form-control" />
-    <label class="form-label" for="form1">Search</label>
-  </div>
-  <button type="button" class="btn btn-primary">
-    <i class="fas fa-search"></i>
-  </button>
-</div> */}
-      
-    </ul>
+            
+<header class="header-area">
+
+<div class="delicious-main-menu">
+    <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+         
+            <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+            
+                <a class="nav-brand" href="index.html"><img src={logo}  alt=""></img></a> 
+
+              
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+
+                <div class="classy-menu">
+
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+
+               
+                    <div class="classynav">
+                        <ul>
+
+                       
+                            <li class="active">
+                            <Link class="nav-link" to="/">Home </Link> 
+                            </li>
+
+                            <li class="">
+                            <Link class="nav-link" to="/about">About Us </Link>
+                            </li>
+
+                             <li class="">
+                            <Link class="nav-link" to="/contact">Contact </Link>
+                            </li>
+                            <li class="">
+                            <Link class="nav-link" to="/register">Register </Link>
+                            </li>
+                            <li class="">
+                            <Link class="nav-link" to="/login">Login</Link>
+                            </li>                    
+
+                        </ul>
+
+                    
+                        {/* <div class="search-btn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div> */}
+
+                    </div>
+                  
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</header>
+
    
   </div>
         )
@@ -107,10 +188,10 @@ class Header extends Component{
                 <Link to="/product/111">Product</Link>
                 <Link to="/register/">Register</Link> */}
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">ChetoMitho</a>
+  {/* <a class="navbar-brand" href="#">ChetoMitho</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> */}
   {menu}
 
   

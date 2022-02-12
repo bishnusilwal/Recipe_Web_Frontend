@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../css/login.css"
+// import "../asset/style.css"
 
 const Login = ()=>{
     const [username, setUsername] = useState('');
@@ -53,7 +54,6 @@ const Login = ()=>{
 
           
         </form>
-          <button className="loginRegisterButton">Register</button>
       </div>
 
 

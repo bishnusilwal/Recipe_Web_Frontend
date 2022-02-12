@@ -42,7 +42,6 @@ const Register=()=>{
         {/* <button className="registerButton">Register</button> */}
         <button type="submit" class="btn btn-registerButton" onClick={userRegister}>Submit</button>
       </form>
-        <button className="registerLoginButton">Login</button>
     </div>
 
 
