@@ -1,61 +1,88 @@
 .addrecipe {
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ),
-      url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: cover;
-  }
-  
-  .recipeTitle {
-    font-size: 50px;
-  }
-  
-  .recipeForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .recipeForm > label {
-    margin: 10px 0;
-  }
-  
-  .recipeInput {
-    padding: 10px;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .recipeInput:focus {
-    outline: none;
-  }
-  
-  .recipeButton {
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: teal;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .recipeAddButton {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: lightcoral;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-  }
+  height: calc(130vh - px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    rgba(18, 17, 17, 0.5),
+    rgba(126, 109, 109, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZCUyMHBpY3R1cmVzJTIwcGhvdG9zJTIwanBlZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+}
+
+.recipeTitle {
+  font-size: 50px;
+    color: white
+}
+
+.Txinput {
+  font-size: 20px;
+  color: white
+}
+
+.recipeForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeForm > label {
+  margin: 5px 0;
+}
+
+.recipeInput {
+  padding: 10px;
+  background-color:#696969;
+  border: none;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.catInput {
+  padding: 10px;
+  background-color:#696969;
+  border: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.recipeInput:focus {
+  outline: none;
+}
+
+.recipeButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.recipeAddButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: lightcoral;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.RSButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(14, 162, 6);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}

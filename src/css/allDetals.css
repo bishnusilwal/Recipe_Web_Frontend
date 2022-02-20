@@ -1,0 +1,24 @@
+.resname{
+    font-size: 20px;
+    color:black;
+
+}
+
+.detals {
+    padding: 5px;
+    color: black;
+    line-height:0.5;
+    font-size: 15;
+   
+  }
+
+  .submitbtn {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }

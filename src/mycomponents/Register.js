@@ -25,22 +25,22 @@ const Register=()=>{
       <div className="register">
       <span className="registerTitle">Register</span>
       <form className="registerForm">
-        <label>Username</label>
-        <input className="registerInput" type="text" placeholder="Enter your username..." 
+        <label   className="Txinput">Username</label>
+        <input className="registerInput" type="text" 
           onChange={(e)=>setUsername(e.target.value)}/>
 
-        <label>Email</label>
-        <input className="registerInput" type="text" placeholder="Enter your email..." 
+        <label  className="Txinput">Email</label>
+        <input className="registerInput" type="text"
         onChange={(e)=>setEmail(e.target.value)}/>
-        <label>Password</label>
-        <input className="registerInput" type="password" placeholder="Enter your password..." 
+        <label  className="Txinput">Password</label>
+        <input className="registerInput" type="password" 
          onChange={(e)=>setPassword(e.target.value)}/>
 
 
 
 
         {/* <button className="registerButton">Register</button> */}
-        <button type="submit" class="btn btn-registerButton" onClick={userRegister}>Submit</button>
+        <button type="submit" class="RSButton" onClick={userRegister}>Submit</button>
       </form>
     </div>
 

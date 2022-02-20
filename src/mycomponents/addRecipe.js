@@ -142,84 +142,81 @@ const Addrecipe=()=>{
     //    </div>
 
 <div className="addrecipe">
-      <span className="recipeTitle">Register</span>
+      <span className="recipeTitle">Add Recipe</span>
       <form  className="recipeForm">
-                       <label>Recipe Name</label>
+                       <label className="Txinput">Recipe Name</label>
                        <input type="text" className="recipeInput" placeholder="Enter your Recipe Name..." 
                        value={name}
                        onChange={e=>{setName(e.target.value)}}
                        />
 
-                    <label>Description</label>
+                    <label className="Txinput">Description</label>
                        <input type="text" className="recipeInput" placeholder="Enter your Discription..." 
                        value={description}
                        onChange={e=>{setDescription (e.target.value)}}
                        />                   
                   
             
-                       <label>Pretime</label>
+                       <label className="Txinput">Pretime</label>
                        <input type="text" className="recipeInput" placeholder="Enter your PreTime..." 
                        value={pretime}
                        onChange={e=>{setPretime(e.target.value)}}
                        />
          
                   
-                       <label>cooktime</label>
+                       <label className="Txinput">cooktime</label>
                        <input type="text" className="recipeInput" placeholder="Enter your CookTime..." 
                        value={cooktime}
                        onChange={e=>{setCooktime(e.target.value)}}
                        />
               
-                       <label>TotalTime</label>
+                       <label className="Txinput">TotalTime</label>
                        <input type="text"className="recipeInput" placeholder="Enter your TotalTime..." 
                        value={totaltime}
                        onChange={e=>{setTotaltime(e.target.value)}}
                        />
+
+<label className="Txinput">Category</label>
              
   
-                   <select name="selectList" id="selectList" onChange={handleSelect}>
+                   <select className="catInput"  name="selectList" id="selectList"    onChange={handleSelect}>
                       <option value="veg">Veg </option>
                       <option value="non veg">Non-Veg</option>
                       <option value="vegan">Vegan</option>
                     </select>
 
 
-                <div className="flex flex-row">
-                   <div className="form-group">
-                       <label>Direction</label>
-                       <input type="text" className="recipeInput" placeholder="Enter your Direction..." 
+                    <label className="Txinput">Direction</label>
+                       <input type="text"className="recipeInput" placeholder="Enter your TotalTime..." 
                        value={direction}
-                       onChange={e=>{setDirection(e.target.value)}}/>
-
-                   </div>
-                
-                   </div>
-
-
-                   <div className="flex flex-row">
-                   <div className="form-group">
-                       <label>Ingredient</label>
-                       <input type="text" className="recipeInput" placeholder="Enter your Ingredients..." 
-                       value={ingredients}
-                       onChange={e=>{setIngredients(e.target.value)}}/>
-
-                   </div>
-                   </div>
-                   <div className="form-group">
-                       <label>Recipe Image</label>
-                       <input type="file" className="recipeInput" 
-                    //    accept="image/png, image/jpeg"
-                       onChange={e=>setRimg(e.target.files[0])}                 
+                       onChange={e=>{setDirection(e.target.value)}}
                        />
-                   </div>
+
+
+<label className="Txinput">Ingredients</label>
+                       <input type="text"className="recipeInput" placeholder="Enter your TotalTime..." 
+                       value={ingredients}
+                       onChange={e=>{setIngredients(e.target.value)}}
+                       />
+
+
+                 
+                   <label className="Txinput">Recipe Image</label>
+                       <input type="file"className="recipeInput" 
+                    //    value={Image}
+                       onChange={e=>setRimg(e.target.files[0])}   
+                       />
+
+
+
                      <div className="form-group">
                             
-                            <input type="Submit" className="btn btn-light" 
+                            <input type="Submit" className="RSButton" 
                             onClick={addUser}
                             />
                         </div>
                </form>
-        <button className="registerLoginButton">Login</button>
+      
      </div> 
 
 

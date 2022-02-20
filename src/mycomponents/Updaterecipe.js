@@ -1,3 +1,5 @@
+
+import "../css/updaterecipe.css"
 import axios from "axios";
 import {DropdownButton, Dropdown} from "react-bootstrap";
 import { useEffect, useState } from "react";
@@ -91,29 +93,126 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
 
 
     return(
-       <div className="container">
-           <div className="row">
+//        <div className="container">
+//            <div className="row">
                
-               {/* <div className="col-md-6">
-                   <h2>{myrecipe.name}</h2>
-                   <p>description : {myrecipe.description}</p>
-                    <p>Pretime : {myrecipe.pretime}</p>
-                    <p>cooktime : {myrecipe.cooktime}</p>
-                    <p>totaltime : {myrecipe.totaltime}</p>
-                    <p>category : {myrecipe.category}</p>
-                    <p>ingredients : {myrecipe.ingredients}</p>
-                    <p>direction : {myrecipe.direction}</p>
-                   <div>
-                      {myrecipe.rdesc}
-                   </div>
-                
-               </div> */}
-               <div className="col-md-6">
-                    <h2>Update Recipe</h2>
+             
+//                <div className="col-md-6">
+//                     <h2>Update Recipe</h2>
 
-                   <form>
-                        <div className="form-group">
-                            <label>Recipe Name</label>
+//                    <form>
+//                         <div className="form-group">
+//                             <label>Recipe Name</label>
+//                             <input type="text" className="form-control"
+//                             placeholder={myrecipe.recipe.name}
+//                              value={name}
+//                              onChange={e=>{setName(e.target.value)}}
+//                              />
+
+                            
+//                         </div>
+//                         <div className="form-group">
+//                        <label>Description</label>
+//                        <input type="text" className="form-control"
+//                        value={description}
+//                        placeholder={myrecipe.recipe.description}
+                    
+//                        onChange={e=>{setDescription(e.target.value)}}
+//                        />
+//                    </div>
+//                    <div className="form-group">
+//                        <label>Pretime</label>
+//                        <input type="text" className="form-control"
+//                        value={pretime}
+//                        placeholder={myrecipe.recipe.pretime}
+//                        onChange={e=>{setPretime(e.target.value)}}
+//                        />
+//                    </div>
+//                    <div className="form-group">
+//                        <label>cooktime</label>
+//                        <input type="text" className="form-control"
+//                        value={cooktime}
+//                        placeholder={myrecipe.recipe.cooktime}
+//                        onChange={e=>{setCooktime(e.target.value)}}
+//                        />
+//                    </div>
+//                    <div className="form-group">
+//                        <label>TotalTime</label>
+//                        <input type="text" className="form-control"
+//                        value={totaltime}
+//                        placeholder={myrecipe.recipe.totaltime}
+//                        onChange={e=>{setTotaltime(e.target.value)}}
+//                        />
+//                    </div>
+//                    <select name="selectList" id="selectList" onChange={handleSelect}>
+                  
+//                       <option value="veg">Veg </option>
+//                       <option value="non veg">Non-Veg</option>
+//                       <option value="vegan">Vegan</option>
+//                     </select>
+
+//                     <div className="flex flex-row">
+//                    <div className="form-group">
+//                        <label>Direction</label>
+//                        <input type="text" className="form-control"
+//                        value={direction}
+//                        placeholder={myrecipe.direction.discription}
+//                        onChange={e=>{setDirection(e.target.value)}}/>
+
+//                    </div>
+//                    {/* <button onClick={addDirection}>add</button> */}
+//                    </div>
+
+//                    <div className="flex flex-row">
+//                    <div className="form-group">
+//                        <label>Ingredient</label>
+//                        <input type="text" className="form-control"
+//                        value={ingredients}
+//                        placeholder={myrecipe.ingredients.name}
+//                        onChange={e=>{setIngredients(e.target.value)}}/>
+
+//                    </div>
+//                    {/* <button onClick={addIngredients}>add</button> */}
+//                    </div>
+
+                        
+
+                        
+//                         <input type="submit" onClick={updaterecipe} />
+
+//                         <div className="form-group">
+
+// <label>Recipe Image</label>
+
+// <input type="file" className="form-control"
+
+// accept="image/png, image/jpeg"
+// onChange={e=>setRimg(e.target.files[0])}
+
+// />
+// <div className="form-group">
+                            
+//                             <input type="Submit" className="btn btn-light" 
+//                             onClick={updateimage}
+//                             />
+//                         </div>
+// </div>
+//                     </form>
+
+                    
+//                </div>
+//            </div>
+//            </div>
+
+
+
+
+
+<div className="updaterecipe">
+      <span className="recipeTitle">Add Recipe</span>
+      <form  className="recipeForm">
+      <div className="form-group">
+                            <label className="Txinput">Recipe Name</label>
                             <input type="text" className="form-control"
                             placeholder={myrecipe.recipe.name}
                              value={name}
@@ -123,7 +222,7 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
                             
                         </div>
                         <div className="form-group">
-                       <label>Description</label>
+                       <label className="Txinput">Description</label>
                        <input type="text" className="form-control"
                        value={description}
                        placeholder={myrecipe.recipe.description}
@@ -132,7 +231,7 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
                        />
                    </div>
                    <div className="form-group">
-                       <label>Pretime</label>
+                       <label className="Txinput">Pretime</label>
                        <input type="text" className="form-control"
                        value={pretime}
                        placeholder={myrecipe.recipe.pretime}
@@ -140,7 +239,7 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
                        />
                    </div>
                    <div className="form-group">
-                       <label>cooktime</label>
+                       <label className="Txinput">cooktime</label>
                        <input type="text" className="form-control"
                        value={cooktime}
                        placeholder={myrecipe.recipe.cooktime}
@@ -148,7 +247,7 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
                        />
                    </div>
                    <div className="form-group">
-                       <label>TotalTime</label>
+                       <label className="Txinput">TotalTime</label>
                        <input type="text" className="form-control"
                        value={totaltime}
                        placeholder={myrecipe.recipe.totaltime}
@@ -164,7 +263,7 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
 
                     <div className="flex flex-row">
                    <div className="form-group">
-                       <label>Direction</label>
+                       <label className="Txinput">Direction</label>
                        <input type="text" className="form-control"
                        value={direction}
                        placeholder={myrecipe.direction.discription}
@@ -176,7 +275,7 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
 
                    <div className="flex flex-row">
                    <div className="form-group">
-                       <label>Ingredient</label>
+                       <label className="Txinput">Ingredient</label>
                        <input type="text" className="form-control"
                        value={ingredients}
                        placeholder={myrecipe.ingredients.name}
@@ -189,11 +288,11 @@ axios.put("http://localhost:90/recipe/update/"+rid, resdata, config )
                         
 
                         
-                        <input type="submit" onClick={updaterecipe} />
+                        <input className="RSButton"  type="submit" onClick={updaterecipe} />
 
                         <div className="form-group">
 
-<label>Recipe Image</label>
+<label className="Txinput">Recipe Image</label>
 
 <input type="file" className="form-control"
 
@@ -203,17 +302,16 @@ onChange={e=>setRimg(e.target.files[0])}
 />
 <div className="form-group">
                             
-                            <input type="Submit" className="btn btn-light" 
+                            <input   type="Submit" className="RSButton"  
                             onClick={updateimage}
                             />
                         </div>
 </div>
-                    </form>
+               </form>
+      
+     </div> 
 
-                    
-               </div>
-           </div>
-           </div>
+
     )
     
 }

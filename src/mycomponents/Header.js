@@ -5,6 +5,7 @@ import logo from '../asset/img/core-img/logo.png';
 
 class Header extends Component{
     render(){
+        
 
       const logout=()=>{
         localStorage.clear();
@@ -34,6 +35,7 @@ class Header extends Component{
                     <span class="navbarToggler"><span></span><span></span><span></span></span>
                 </div>
 
+
                 <div class="classy-menu">
 
                     <div class="classycloseIcon">
@@ -45,7 +47,7 @@ class Header extends Component{
                         <ul>
 
                        
-                            <li class="active">
+                            <li class="">
                             <Link class="nav-link" to="/">Home </Link> 
                             </li>
 
@@ -53,9 +55,7 @@ class Header extends Component{
                             <Link class="nav-link" to="/about">About Us </Link>
                             </li>
 
-                             <li class="">
-                            <Link class="nav-link" to="/contact">Contact </Link>
-                            </li>
+                            
                             <li class="">
                             <Link class="nav-link" to="/addrecipe">Add Recipe </Link>
                             </li>
@@ -72,7 +72,7 @@ class Header extends Component{
 
 
                             <li class="">
-                            <button class="nav-link" onClick={logout} >Log Out </button>
+                            <button class="submitbtn" onClick={logout} >Log Out </button>
                             </li>
                             
 
@@ -146,9 +146,7 @@ class Header extends Component{
                             <Link class="nav-link" to="/about">About Us </Link>
                             </li>
 
-                             <li class="">
-                            <Link class="nav-link" to="/contact">Contact </Link>
-                            </li>
+                            
                             <li class="">
                             <Link class="nav-link" to="/register">Register </Link>
                             </li>

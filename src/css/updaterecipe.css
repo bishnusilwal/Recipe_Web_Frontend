@@ -1,5 +1,5 @@
-.adduser {
-    height: calc(100vh - 50px);
+.updaterecipe {
+    height: calc(130vh - px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,9 +12,9 @@
     background-size: cover;
   }
   
-  .userTitle {
+  .recipeTitle {
     font-size: 50px;
-    color: white
+      color: white
   }
   
   .Txinput {
@@ -22,28 +22,38 @@
     color: white
   }
   
-  .userForm {
+  .recipeForm {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
   }
   
-  .userForm > label {
-    margin: 10px 0;
+  .recipeForm > label {
+    margin: 5px 0;
   }
   
-  .userInput {
+  .recipeInput {
     padding: 10px;
-    background-color: #696969;
+    background-color:#696969;
+    border: none;
     border: none;
     border-radius: 10px;
   }
   
-  .userInput:focus {
+  
+  .catInput {
+    padding: 10px;
+    background-color:#696969;
+    border: none;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .recipeInput:focus {
     outline: none;
   }
   
-  .userButton {
+  .recipeButton {
     margin-top: 20px;
     cursor: pointer;
     background-color: teal;
@@ -54,7 +64,7 @@
     text-align: center;
   }
   
-  .userAddButton {
+  .recipeAddButton {
     position: absolute;
     top: 60px;
     right: 20px;
@@ -65,7 +75,7 @@
     color: white;
     border-radius: 10px;
   }
-
+  
   .RSButton {
     margin-top: 20px;
     cursor: pointer;
@@ -76,4 +86,3 @@
     border-radius: 10px;
     text-align: center;
   }
-  

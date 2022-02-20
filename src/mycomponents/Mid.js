@@ -1,7 +1,6 @@
 import { Component } from "react/cjs/react.development";
 import Home from "./Home";
 import About from "./About";
-import Contact from "./Contact";
 
 import Register from "./Register";
 import Login from "./Login";
@@ -19,7 +18,6 @@ class Mid extends Component{
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/about" element={<About/>} />
-                    <Route path="/contact" element={<Contact/>} />
                
 
                    <Route path="/register" element={<Register/>} />

@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+import "../css/profile.css"
+
 const Showuser=()=>{
     const [udata,setUdata]=useState([{}]);
     const config={
@@ -31,10 +34,10 @@ const Showuser=()=>{
                         <div className="col-md-4">
                              {/* <p><img src={'http://localhost:90/'+singleData.uimg
                     } className="img-fluid"  /></p> */}
-                        <h2>Fullname Name:{udata.fullname}</h2>
-                        <p>phone : {udata.phone}</p>
-                        <p>location : {udata.location}</p>
-                        <p>bio : {udata.bio}</p>
+                        <h2 className="usernametitle">Fullname Name:{udata.fullname}</h2>
+                        <p className="detals">phone : {udata.phone}</p>
+                        <p className="detals">location : {udata.location}</p>
+                        <p className="detals"> bio : {udata.bio}</p>
                         {/* <button onClick={()=>{deleteRecipe(singleData._id)}}>Delete</button> */}
                         {/* <Link to={'/updaterecipe/'+singleData._id}>Update Recipe</Link> */}
                 

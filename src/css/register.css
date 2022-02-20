@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
+        rgba(18, 17, 17, 0.5),
+        rgba(126, 109, 109, 0.5)
       ),
       url("https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZCUyMHBpY3R1cmVzJTIwcGhvdG9zJTIwanBlZyUyMGhkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
     background-size: cover;
@@ -14,6 +14,12 @@
   
   .registerTitle {
     font-size: 50px;
+    color: white
+  }
+
+  .Txinput {
+    font-size: 20px;
+    color: white
   }
   
   .registerForm {
@@ -28,7 +34,7 @@
   
   .registerInput {
     padding: 10px;
-    background-color: white;
+    background-color:#696969;
     border: none;
     border-radius: 10px;
   }
@@ -37,10 +43,25 @@
     outline: none;
   }
   
-  .registerButton {
+
+
+
+  .RegisterButton {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .RSButton {
     margin-top: 20px;
     cursor: pointer;
-    background-color: teal;
+    background-color: rgb(14, 162, 6);
     color: white;
     padding: 10px;
     border: none;
@@ -48,14 +69,4 @@
     text-align: center;
   }
   
-  .registerLoginButton {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: lightcoral;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-  }
+  

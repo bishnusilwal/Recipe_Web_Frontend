@@ -1,3 +1,4 @@
+import "../css/allDetals.css"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -55,10 +56,12 @@ const Detailrecipe=()=>{
        async function likePost(){
             await axios.put("http://localhost:90/recipe/update/like/"+rid)
             .then(result => {
+                console.log("not error");
                 console.log(result);
             })
             .catch(error => {
                 console.log(error);
+                console.log(" error");
             })
         }
 
@@ -90,15 +93,15 @@ const Detailrecipe=()=>{
             <div className="">
 
                         <div className="col-md-4">
-                        <h2>Recipe Name:{udata.recipe.name}</h2>
-                        <p>description : {udata.recipe.description}</p>
-                        <p>Pretime : {udata.recipe.pretime}</p>
-                        <p>cooktime : {udata.recipe.cooktime}</p>
-                        <p>totaltime : {udata.recipe.totaltime}</p>
-                        <p>category : {udata.recipe.category}</p>
-                        <p>ingredients : {udata.ingredients.name}</p>
-                        <p>direction : {udata.direction.discription}</p>
-                        <p>Rimg : {udata.recipe.Rimg}</p>
+                        <h2 className="resname">Recipe Name:{udata.recipe.name}</h2>
+                        <p className="detals">description : {udata.recipe.description}</p>
+                        <p className="detals">Pretime : {udata.recipe.pretime}</p>
+                        <p className="detals">cooktime : {udata.recipe.cooktime}</p>
+                        <p className="detals">totaltime : {udata.recipe.totaltime}</p>
+                        <p className="detals">category : {udata.recipe.category}</p>
+                        <p className="detals">ingredients : {udata.ingredients.name}</p>
+                        <p className="detals">direction : {udata.direction.discription}</p>
+                        {/* <p>Rimg : {udata.recipe.Rimg}</p> */}
 
                         <select 
                 class="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10"
@@ -116,7 +119,7 @@ const Detailrecipe=()=>{
                 <option value={10}>10</option>
               </select>
 
-              <input type="Submit" className="btn btn-light" 
+              <input type="Submit" className="submitbtn" 
  onClick={ratePost}
  />
 
@@ -130,24 +133,25 @@ onChange={e=>{setReview(e.target.value)}}
 
 
                       
- /> <input type="Submit" className="btn btn-light" 
+ /> <input type="Submit" className="submitbtn" 
  onClick={reviewePost}
  />
                        </div>
                        <div className="form-group">
+                           {/* <label className="submitbtn">Like</label> */}
                             
-                            <input type="button" className="btn btn-light" 
+                            <input type="button" className="submitbtn"
                             onClick={likePost}
                             />
                         </div>
-                        <p>Reviews</p>
+                        <p className="rev">Reviews</p>
                           {
                              
                             udata.review.map((i) => {
                                 return (
                                     <div>
-                                         <p>manxe: {i.mance}</p>
-                                         <p>review: {i.reviewss}</p>
+                                         <p className="detals">User: {i.mance}</p>
+                                         <p className="detals">review: {i.reviewss}</p>
                                     </div>
                                 )
                             })

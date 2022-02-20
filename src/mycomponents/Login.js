@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../css/login.css"
-// import "../asset/style.css"
+
 
 const Login = ()=>{
     const [username, setUsername] = useState('');
@@ -32,23 +32,23 @@ const Login = ()=>{
     return(
         <div className="login">
         <span className="loginTitle">Login</span>
+    
         <form className="loginForm">
-          <label>Username</label>
-          <input className="loginInput" type="text" placeholder="Enter your username..."
+            
+          <label  className="Txinput">Username</label>
+          <input className="loginInput" type="text" 
            value={username}
                               onChange={(e)=>setUsername(e.target.value)}
             />
-          <label>Password</label>
-          <input className="loginInput" type="password" placeholder="Enter your password..."
+          <label  className="Txinput">Password</label>
+          <input className="loginInput" type="password" 
            value={password}
                                 onChange={(e)=>setPassword(e.target.value)} />
           
           <div className="form-group">
               <button className="loginButton"  onClick={userLogin}>Login</button>
                             
-                            {/* <input type="Submit" className="btn btn-light" 
-                            onClick={userLogin}
-                            /> */}
+                            
                         </div>
 
 

@@ -1,10 +1,13 @@
+
+// import logo from '../asset/img/bg-img/breadcumb1.jpg';
+
 import { Component } from "react/cjs/react.development";
 class About extends Component{
     render(){
         return(
             <div>
     <div class="breadcumb-area bg-img bg-overlay"
-    //  style="background-image: url(img/bg-img/breadcumb1.jpg);"
+     style={{backgroundImage: `url("https://media.istockphoto.com/photos/mixed-berries-smoothie-bowl-on-rustic-wooden-table-picture-id1305291791?s=612x612")`}}
      >
         <div class="container h-100">
             <div class="row h-100 align-items-center">
@@ -34,15 +37,10 @@ class About extends Component{
                 </div>
             </div>
 
-           
-             
-
-            
-             
 
             <div class="row">
                 <div class="col-12">
-                    {/* <img class="mb-70" src="img/bg-img/about.png" alt=""></img> */}
+                    <img class="mb-70" src="https://media.istockphoto.com/photos/mixed-berries-smoothie-bowl-on-rustic-wooden-table-picture-id1305291791?s=612x612" alt=""></img>
                     <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin malesuada et mauris ut lobortis. Sed eu iaculis sapien, eget luctus quam. Aenean hendrerit varius massa quis laoreet. Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
             </div>

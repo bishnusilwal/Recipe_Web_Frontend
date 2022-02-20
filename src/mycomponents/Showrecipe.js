@@ -1,3 +1,5 @@
+import "../css/recipedetails.css"
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -38,19 +40,21 @@ const Showrecipe=()=>{
 
                     return(
                         <div className="col-md-4">
-                        <h2>Recipe Name:{singleData.name}</h2>
+                        <h2 className="resname">Recipe Name:{singleData.name}</h2>
                         <p><img src={'http://localhost:90/'+singleData.rimg
                     } className="img-fluid"  /></p>
-                        <p>description : {singleData.description}</p>
-                        <p>Pretime : {singleData.pretime}</p>
-                        <p>cooktime : {singleData.cooktime}</p>
-                        <p>totaltime : {singleData.totaltime}</p>
-                        <p>category : {singleData.category}</p>
+                        <p className="detals">description : {singleData.description}</p>
+                        <p className="detals">Pretime : {singleData.pretime}</p>
+                        <p className="detals">cooktime : {singleData.cooktime}</p>
+                        <p className="detals">totaltime : {singleData.totaltime}</p>
+                        <p className="detals">category : {singleData.category}</p>
                         {/* <p>ingredients : {singleData.ingredient}</p>                    
                         <p>direction : {singleData.direction}</p> */}
-                        <button onClick={()=>{deleteRecipe(singleData._id)}}>Delete</button>
-                        <Link to={'/updaterecipe/'+singleData._id}>Update Recipe</Link>
-                        <Link to={'/detail/'+singleData._id}>View</Link>
+                        <button className="delete" onClick={()=>{deleteRecipe(singleData._id)}}>Delete</button>
+
+                        <button className="updatbtn" ><Link to={'/updaterecipe/'+singleData._id}>Update Recipe</Link></button>
+                        
+                       <button className="viewbtn"> <Link to={'/detail/'+singleData._id}>View</Link></button>
                         
                     </div>
                     )

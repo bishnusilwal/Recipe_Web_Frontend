@@ -77,26 +77,26 @@ const Adduser=()=>{
 
 
     <div className="adduser">
-      <span className="userTitle">Add User</span>
+      <span className="userTitle">Update Your Profile</span>
       <form className="userForm">
-        <label>Fullname</label>
-        <input className="userInput" type="text" placeholder="Enter your fullname..." 
+        <label className="Txinput">Fullname</label>
+        <input className="userInput" type="text"
           onChange={(e)=>setFullname(e.target.value)}/>
 
         {/* <label>Email</label>
         <input className="userInput" type="text" placeholder="Enter your email..." 
         onChange={(e)=>setEmail(e.target.value)}/> */}
-        <label>Phone</label>
-        <input className="userInput" type="text" placeholder="Enter your phone..." 
+        <label className="Txinput">Phone</label>
+        <input className="userInput" type="text"
          onChange={(e)=>setPhone(e.target.value)}/>
 
 
-<label>Location</label>
-        <input className="userInput" type="text" placeholder="Enter your Location..." 
+<label className="Txinput">Location</label>
+        <input className="userInput" type="text" 
           onChange={(e)=>setLocation(e.target.value)}/>
 
-<label>Bio</label>
-        <input className="registerInput" type="text" placeholder="Enter your Bio..." 
+<label className="Txinput">Bio</label>
+        <input className="registerInput" type="text"
           onChange={(e)=>setBio(e.target.value)}/>
 
 
@@ -113,7 +113,7 @@ onChange={e=>setUimg(e.target.files[0])}
 
 
         {/* <button className="registerButton">Register</button> */}
-        <button type="submit" class="btn btn-userButton" onClick={addUser}>Submit</button>
+        <button type="submit" class="RSButton" onClick={addUser}>Submit</button>
       </form>
       
     </div>

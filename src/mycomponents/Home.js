@@ -77,9 +77,9 @@ const Showrecipe=()=>{
         useEffect(()=>{
             axios.get("http://localhost:90/recipe/")
             .then(result=>{
-                // console.log(result.data)
+                console.log(result.data)
                 setUdata(result.data)
-                console.log(udata);
+                // console.log(udata);
             })
             .catch(e=>{
                 console.log(e)
@@ -96,7 +96,7 @@ const Showrecipe=()=>{
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h3>The best Receipies</h3>
+                        <h3>All Receipies</h3>
                     </div>
                 </div>
             </div>
@@ -114,13 +114,13 @@ const Showrecipe=()=>{
                                     <a href="receipe-post.html">
                                         <h5>{recipe.name}</h5>
                                     </a>
-                                    <div class="ratings">
+                                    {/* <div class="ratings">
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </Link>
                         ))

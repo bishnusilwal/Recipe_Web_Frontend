@@ -1,0 +1,47 @@
+.resname{
+    font-size: 25px;
+    color:black;
+
+}
+
+.detals {
+    padding: 5px;
+    color: black;
+    line-height:0.5;
+    font-size: 15;
+   
+  }
+  .delete {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+
+  .updatbtn {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .viewbtn {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+

@@ -1,3 +1,5 @@
+
+import {Helmet} from "react-helmet";
 import logo from './logo.svg';
 import './App.css';
 import Header from './mycomponents/Header';
@@ -12,6 +14,7 @@ function App() {
   }
   return (
     <div>
+
       <BrowserRouter>
       
       <Header username ={data.username} address={data.address}></Header>

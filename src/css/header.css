@@ -1,0 +1,10 @@
+.submitbtn {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
