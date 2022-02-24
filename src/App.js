@@ -8,9 +8,6 @@ import {BrowserRouter} from 'react-router-dom';
 import Mid from './mycomponents/Mid';
 function App() {
   const data = {
-    username : "Bishnu",
-    address : "Ktm",
-    phone : "9807686760"
   }
   return (
     <div>

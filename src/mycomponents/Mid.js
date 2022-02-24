@@ -18,8 +18,6 @@ class Mid extends Component{
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/about" element={<About/>} />
-               
-
                    <Route path="/register" element={<Register/>} />
                    <Route path="/login" element={<Login/>} />
                    <Route path="/addrecipe" element={<Addrecipe/>} />
@@ -27,9 +25,7 @@ class Mid extends Component{
                    <Route path="/adduser" element={<Adduser/>} />
                    <Route path="/showuser" element={<Showuser/>} />
                    <Route path="/updaterecipe/:rid" element={<Updaterecipe/>} />
-                   <Route path="/detail/:rid" element={<Detailrecipe/>} />
-
-                    
+                   <Route path="/detail/:rid" element={<Detailrecipe/>} />   
                 </Routes>
             </div>
         )

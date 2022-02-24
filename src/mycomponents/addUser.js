@@ -1,12 +1,4 @@
-// import { Component } from "react/cjs/react.development";
-// class Adduser extends Component{
-//     render(){
-//         return(
-//             <div>This is adduser page content...</div>
-//         )
-//     }
-// }
-// export default Adduser;
+
 
 
 import "../css/addUser.css"
@@ -17,14 +9,12 @@ import { useState } from "react";
 import * as React from "react";
 
 const Adduser=()=>{
-    // const [username,setUsername]= useState('');
-    // const [password,setPassword]= useState('');
+ 
     const [fullname,setFullname]= useState('');
-    // const [email,setEmail]= useState('');
     const [phone,setPhone]= useState('');
     const [location,setLocation]= useState('');
     const [bio,setBio]= useState('');
-    // const [uimg,setUimg]=useState(null);
+  
 
     const config={
         headers:{
@@ -32,19 +22,6 @@ const Adduser=()=>{
         }
     }
 
-    // const addUser=(e)=>{
-    //     e.preventDefault();
-        // const recipeData={
-        //     name,description,pretime,cooktime,totaltime,category,ingredients,direction
-        // }
-
-        // const userData=new FormData();
-        // userData.append('fullname',fullname);
-        // userData.append('email',email);
-        // userData.append('phone',phone);
-        // userData.append('location',location);
-        // userData.append('bio',bio);
-        // userData.append('recipe_image',uimg);
 
 
         const addUser=(e)=>{
@@ -59,9 +36,6 @@ const Adduser=()=>{
         .then(result111=>{
             console.log(result111)
 
-            // if(result111.data.success){
-            //     setmessage('recipe inserted succesfully!!');
-            // }
            
         })
         
@@ -83,9 +57,7 @@ const Adduser=()=>{
         <input className="userInput" type="text"
           onChange={(e)=>setFullname(e.target.value)}/>
 
-        {/* <label>Email</label>
-        <input className="userInput" type="text" placeholder="Enter your email..." 
-        onChange={(e)=>setEmail(e.target.value)}/> */}
+     
         <label className="Txinput">Phone</label>
         <input className="userInput" type="text"
          onChange={(e)=>setPhone(e.target.value)}/>
@@ -100,19 +72,11 @@ const Adduser=()=>{
           onChange={(e)=>setBio(e.target.value)}/>
 
 
-{/* <div className="form-group">
-
-<label>User Image</label>
-<input type="file" className="form-control"
-onChange={e=>setUimg(e.target.files[0])}
-
-/>
-</div> */}
 
 
 
 
-        {/* <button className="registerButton">Register</button> */}
+      
         <button type="submit" class="RSButton" onClick={addUser}>Submit</button>
       </form>
       
